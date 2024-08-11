@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "athletes",
+  "info": {
+    "singularName": "athlete",
+    "pluralName": "athletes",
+    "displayName": "athlete",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "noms": {
+      "type": "string"
+    },
+    "lieu_naissance": {
+      "type": "string"
+    },
+    "date_naissance": {
+      "type": "date"
+    },
+    "sexe": {
+      "type": "enumeration",
+      "enum": [
+        "M",
+        "F"
+      ]
+    },
+    "poids": {
+      "type": "string"
+    },
+    "categorie": {
+      "type": "string"
+    },
+    "club": {
+      "type": "string"
+    },
+    "cercle": {
+      "type": "string"
+    },
+    "entente": {
+      "type": "string"
+    },
+    "ligue": {
+      "type": "string"
+    },
+    "grade": {
+      "type": "string"
+    },
+    "licences": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::licence.licence",
+      "mappedBy": "athlete"
+    }
+  }
+}

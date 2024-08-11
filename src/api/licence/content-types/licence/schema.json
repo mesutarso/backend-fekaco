@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "licences",
+  "info": {
+    "singularName": "licence",
+    "pluralName": "licences",
+    "displayName": "licence"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numero": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "date_delivrance": {
+      "type": "date"
+    },
+    "athlete": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::athlete.athlete",
+      "inversedBy": "licences"
+    }
+  }
+}
